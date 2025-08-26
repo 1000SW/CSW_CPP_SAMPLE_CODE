@@ -13,6 +13,10 @@
 #include "GameplayAbility.h"
 #include "AbilityTask.h"
 
+// ======================
+// GAS 관련 ImGui 툴 관련 기능
+// ======================
+
 CGuiLayer_GameplayAbilitySystem::CGuiLayer_GameplayAbilitySystem()
 {
 }
@@ -22,6 +26,11 @@ HRESULT CGuiLayer_GameplayAbilitySystem::Initialize()
     return S_OK;
 }
 
+// ======================
+// 레이어가 활성화될 때 매 틱 불려지는 함수
+// 가지고 있는 어빌리티 / 활성화된 어빌리티에 대한 시각화 기능 제공
+// 어빌리티 내부적으로 어떤 태그가 존재하고 어떤 태스크가 존재하는지 시각화 기능 제공
+// ======================
 void CGuiLayer_GameplayAbilitySystem::On_GuiRender(CImGui_Manager* pManager)
 {
     if (nullptr == m_pASC)
@@ -48,7 +57,6 @@ void CGuiLayer_GameplayAbilitySystem::On_GuiRender(CImGui_Manager* pManager)
             }
         }
     }
-    
 
     ImGui::Begin("GAS Tool");
 
@@ -103,25 +111,15 @@ void CGuiLayer_GameplayAbilitySystem::Show_GameplayTagContainer(CImGui_Manager* 
 {
     for (auto& Tag : Container.m_GameplayTags)
     {
-        if (Tag.m_strTag.size()/* && ImGui::TreeNode(Tag.m_strTag.c_str())*/)
+        if (Tag.m_strTag.size())
         {
             ImGui::Text(Tag.m_strTag.c_str());
-            /*for (auto& ParentTag : Container.m_ParentTags)
-            {
-                ImGui::Text(ParentTag.m_strTag.c_str());
-            }
-
-            ImGui::TreePop();*/
         }
     }
 }
 
 void CGuiLayer_GameplayAbilitySystem::DealWithAbility(CImGui_Manager* pManager, CAbilitySystemComponent* pASC, IGameplayAbility* pAbility)
 {
-    // Todo
-    // 이름띄우고, 태그 목록들 띄워주기
-    // 활성화된 어빌리티들 클래스 이름 정도 띄워주기.
-
     ImGui::Text(pAbility->m_strAbilityName.c_str());
 
     ImGui::SeparatorText("AbilityTags");

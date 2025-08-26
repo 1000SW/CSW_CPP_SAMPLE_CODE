@@ -30,6 +30,9 @@ void IAbilityTask::Tick_Task(_float fTimeDelta)
 {
 }
 
+// ======================
+// 어빌리티가 어빌리티 태스크를 실행시키는데 사용하는 함수
+// ======================
 _bool IAbilityTask::ReadyForActivation()
 {
     __super::ReadyForActivation();
@@ -39,6 +42,9 @@ _bool IAbilityTask::ReadyForActivation()
     return true;
 }
 
+// ======================
+// 생성 관련 함수
+// ======================
 void IAbilityTask::Init_Task(IGameplayAbility& ThisAbility)
 {
 	m_pOnwerAbility = &ThisAbility;
@@ -49,6 +55,9 @@ void IAbilityTask::Init_Task(IGameplayAbility& ThisAbility)
     m_ActorInfo = ThisAbility.Get_ActorInfo();
 }
 
+// ======================
+// 내부적으로 태스크가 종료될 때 부르는 함수
+// ======================
 void IAbilityTask::End_Task()
 {
     if (m_eTaskState == TYPE_ACTIVE)

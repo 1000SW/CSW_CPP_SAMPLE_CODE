@@ -13,15 +13,15 @@ https://www.youtube.com/watch?v=4UamT2TU4wU
 위 클래스 다이어그램의 GAS 엔진 컴포넌트를 부모 컴포넌트로 삼고, 클라이언트에서 Aim Ability 및 AimSpreadTask와 같은 Ability/AbilityTask에 대해서 상속받는 클래스를 만들고 사용함으로써 플레이어를 제어했습니다.
 
 ##  기타 프로젝트 샘플 영상
-# 다크소울 모작 게임
+### 다크소울 모작 게임
 https://www.youtube.com/watch?v=YnEmofBzoUM 
 개인 프로젝트
 
-# 위저드 오브 레전드 모작 게임
+### 위저드 오브 레전드 모작 게임
 [https://studio.youtube.com/video/1qdcXrJYH-U/edit](https://www.youtube.com/watch?v=1qdcXrJYH-U)
 팀 프로젝트
 맡은 역할: 팀장, 맵, 불 파티클
 
-# 악마성 드라큘라 폐허의 초상화 모작 게임
+### 악마성 드라큘라 폐허의 초상화 모작 게임
 https://www.youtube.com/watch?v=u_DRiAhbY6A
 개인 프로젝트

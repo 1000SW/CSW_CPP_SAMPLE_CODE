@@ -12,7 +12,8 @@ https://www.youtube.com/watch?v=4UamT2TU4wU
 플레이어 캐릭터에 대한 액션 및 상태 제어를 위해 언리얼 엔진의 GAS 시스템을 벤치마킹해 제 프로젝트에서 직접 구현했습니다.
 
 Engine Proejct에 Abilty System Component에 대한 클래스를 설계했습니다.
-Client Project에서 Engine을 dll 라이브러리를 통해 이식받고 Ability System Component의 구성요소를 바탕으로 총 쏘기, 조준과 같은 게임 내 액션과 같은 콘텐츠 요소를 개발했습니다.
+
+Client Project에서 Engine 프로젝트를 dll 라이브러리를 통해 이식받고 Ability System Component의 구성요소를 바탕으로 총 쏘기, 조준과 같은 게임 내 액션과 같은 콘텐츠 요소를 개발했습니다.
 
 ##  기타 프로젝트 샘플 영상
 ### 다크소울 모작 게임(개인 프로젝트)
